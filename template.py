@@ -2,11 +2,11 @@ from pathlib import Path
 
 
 def main():
-    input_file = '1.in'
+    input_file = '0.in'
     lines = open(Path(__file__).parent / input_file).read().splitlines()
 
     print(f'{len(lines)}')
-    assert len(lines) == 28
+    assert len(lines) == 1000
     print('All tests pass.')
 
 

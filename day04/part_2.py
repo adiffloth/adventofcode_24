@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 def is_in_bounds(coord, lines):
     r, c = coord
     return 0 <= r < len(lines) and 0 <= c < len(lines[0])
@@ -16,14 +19,19 @@ def check_x_mas(r, c, lines):
     return matches_pattern(major, lines) and matches_pattern(minor, lines)
 
 
-lines = open('AoC_24/day04/0.in').read().splitlines()
-total = 0
-for r in range(1, len(lines) - 1):  # Don't need to check first and last for center A
-    for c in range(1, len(lines[0]) - 1):
-        if lines[r][c] == 'A':
-            if check_x_mas(r, c, lines):
-                total += 1
+def main():
+    input_file = '0.in'
+    lines = open(Path(__file__).parent / input_file).read().splitlines()
+    total = 0
+    for r in range(1, len(lines) - 1):  # Don't need to check first and last for center A
+        for c in range(1, len(lines[0]) - 1):
+            if lines[r][c] == 'A':
+                if check_x_mas(r, c, lines):
+                    total += 1
+    print(f'{total}')
+    assert total == 1864
+    print('All tests pass.')
 
-print(total)
-assert total == 1864
-print('All tests pass.')
+
+if __name__ == "__main__":
+    main()

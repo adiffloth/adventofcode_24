@@ -2,7 +2,7 @@ import re
 
 pattern = r"mul\(\d+,\d+\)"
 total = 0
-for line in open('AoC_24/day03/0.in', encoding='UTF-8').read().splitlines():
+for line in open('day03/0.in', encoding='UTF-8').read().splitlines():
     matches = re.findall(pattern, line)
     for match in matches:
         a, b = match[4:-1].split(",")

@@ -1,5 +1,5 @@
 lt, rt = [], []
-for line in open('AoC_24/day01/0.in').read().splitlines():
+for line in open('day01/0.in').read().splitlines():
     l, r = (line.split())
     lt.append(int(l))
     rt.append(int(r))

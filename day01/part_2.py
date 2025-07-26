@@ -2,7 +2,7 @@ from collections import defaultdict
 
 score = 0
 ld, rd = defaultdict(int), defaultdict(int)
-for line in open('AoC_24/day01/0.in').read().splitlines():
+for line in open('day01/0.in').read().splitlines():
     l, r = (line.split())
     ld[l] += 1
     rd[r] += 1

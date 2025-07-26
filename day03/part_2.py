@@ -5,7 +5,7 @@ do_pattern = r"do\(\)"
 dont_pattern = r"don't\(\)"
 total = 0
 enabled = True
-for line in open('AoC_24/day03/2.in').read().splitlines():
+for line in open('day03/0.in').read().splitlines():
     tokens = re.split(r"(?<=\))", line)
     for token in tokens:
         if re.search(do_pattern, token):
@@ -19,3 +19,5 @@ for line in open('AoC_24/day03/2.in').read().splitlines():
                 total += a * b
 
 print(total)
+assert total == 107862689
+print('All tests pass.')

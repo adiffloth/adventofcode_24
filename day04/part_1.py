@@ -21,7 +21,7 @@ def check_xmas(coord, dir, lines):
     return True
 
 
-lines = open('AoC_24/day04/0.in').read().splitlines()
+lines = open('day04/0.in').read().splitlines()
 total = 0
 for r, line in enumerate(lines):
     for c, char in enumerate(line):
