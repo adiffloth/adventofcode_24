@@ -1,4 +1,3 @@
-# Some weird change
 from pathlib import Path
 
 
