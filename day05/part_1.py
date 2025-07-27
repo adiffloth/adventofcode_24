@@ -50,7 +50,7 @@ def is_correctly_ordered(update, rules):
 
 
 def get_middle_page(update):
-    return update[len(update)//2]
+    return update[len(update) // 2]
 
 
 def count_correct_updates(rules, updates):
